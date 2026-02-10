@@ -164,7 +164,7 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                             <span className={`text-[12px] font-bold ${activeApp === 'jotto' || activeApp === 'notes' ? 'text-black' : 'text-white'}`}>{new Date().getHours()}:{new Date().getMinutes()}</span>
                             <button
                                 onClick={activeApp ? () => setActiveApp(null) : onClose}
-                                className={`w-8 h-8 rounded-full flex items-center justify-center transition-all active:scale-75 ${activeApp === 'jotto' || activeApp === 'notes' ? 'bg-black/10 text-black' : 'bg-white/10 text-white'}`}
+                                className={`w-8 h-8 rounded-full cursor-pointer flex items-center justify-center transition-all active:scale-75 ${activeApp === 'jotto' || activeApp === 'notes' ? 'bg-black/10 text-black' : 'bg-white/10 text-white'}`}
                             >
                                 {activeApp ? '←' : '✕'}
                             </button>

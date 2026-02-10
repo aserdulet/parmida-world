@@ -119,7 +119,7 @@ const Home = () => {
             <div className={`absolute top-6 left-6 z-[9999] p-6 bg-black/80 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl text-white max-w-sm transition-all duration-700 ${isTransitioning ? 'opacity-0 -translate-y-4' : 'opacity-100'}`}>
               <p className="text-pink-500 font-black text-[10px] uppercase tracking-widest mb-1">Parmida's Express • 2026</p>
               <h2 className="text-2xl font-black uppercase mb-4 leading-tight">{STATIONS[currentStep].label}</h2>
-              <button onClick={handleNext} className="w-full py-4 bg-white text-black font-black rounded-2xl hover:bg-pink-500 hover:text-white transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg">
+              <button onClick={handleNext} className="w-full py-4 bg-white text-black font-black rounded-2xl hover:bg-pink-500 hover:text-white transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg cursor-pointer">
                 {STATIONS[currentStep].btn} ➔
               </button>
             </div>
@@ -130,7 +130,7 @@ const Home = () => {
         {!isPhoneOpen && (
             <button
                 onClick={() => { setIsPhoneOpen(true); setHasNotification(false); }}
-                className={`absolute bottom-10 right-10 z-[100] w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-3xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all duration-500 border border-white/20 ${isTransitioning ? 'opacity-0 scale-50' : 'opacity-100 scale-100'}`}
+                className={`absolute bottom-10 right-10 z-[100] cursor-pointer w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-3xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all duration-500 border border-white/20 ${isTransitioning ? 'opacity-0 scale-50' : 'opacity-100 scale-100'}`}
             >
               <span className="text-4xl">📱</span>
               {hasNotification && (

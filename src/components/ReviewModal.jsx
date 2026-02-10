@@ -10,11 +10,13 @@ export function ReviewModal({ isOpen, onClose }) {
                 {/* w-14 h-14 flex items-center justify-center rounded-full bg-black text-white hover:bg-[#d4af37] transition-all duration-500 shadow-xl group cursor-pointer
                 group-hover:rotate-90 transition-transform duration-500 text-xl
                 */}
-                <div className="bg-linear-to-b from-white to-pink-50 p-5 text-center relative shrink-0 border-b border-pink-100/50 group cursor-pointer">
+                <div className="bg-linear-to-b from-white to-pink-50 p-5 text-center relative shrink-0 border-b border-pink-100/50">
                     <button
                         onClick={onClose}
-                        className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-pink-100 hover:bg-pink-200 rounded-full text-pink-700 transition-all active:scale-90"
-                    >✕</button>
+                        className="absolute top-4 right-4 z-30 w-10 h-10 flex items-center justify-center rounded-full bg-black text-white hover:bg-pink-500 transition-all duration-500 shadow-xl group cursor-pointer active:scale-90"
+                    >
+                        <span className="group-hover:rotate-90 transition-transform duration-500 text-lg">✕</span>
+                    </button>
 
                     <div className="w-14 h-14 bg-white rounded-full mx-auto mb-2 flex items-center justify-center text-2xl shadow-lg shadow-pink-100 border-4 border-white">
                         👩‍⚕️

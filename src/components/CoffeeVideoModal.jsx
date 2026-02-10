@@ -10,9 +10,9 @@ export function CoffeeVideoModal({ isOpen, onClose }) {
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-6 right-6 z-30 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-[#f1c40f] hover:text-black rounded-full text-white transition-all duration-300 active:scale-90"
+                    className="absolute top-6 right-6 z-30 w-12 h-12 flex items-center justify-center rounded-full bg-black text-white hover:bg-[#f1c40f] hover:text-black transition-all duration-500 shadow-xl group cursor-pointer active:scale-90"
                 >
-                    <span className="text-xl">✕</span>
+                    <span className="group-hover:rotate-90 transition-transform duration-500 text-xl">✕</span>
                 </button>
 
                 {/* Image Container */}
@@ -56,7 +56,7 @@ export function CoffeeVideoModal({ isOpen, onClose }) {
 
                     <button
                         onClick={onClose}
-                        className="px-8 py-3 bg-white text-black font-black rounded-xl hover:bg-[#f1c40f] transition-all active:scale-95 text-[12px] uppercase tracking-widest"
+                        className="px-8 py-3 bg-white text-black font-black rounded-xl hover:bg-[#f1c40f] transition-all active:scale-95 text-[12px] uppercase tracking-widest cursor-pointer"
                     >
                         Close ad
                     </button>
