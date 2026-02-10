@@ -43,7 +43,7 @@ export const BackgroundMusic = ({ isPhoneOpen, isCoffeeOpen }) => {
     };
 
     return (
-        <div className="flex flex-col items-end gap-1 md:gap-2">
+        <div className="flex flex-col items-end gap-1 md:gap-2 cursor-pointer">
             <button
                 onClick={toggleMusic}
                 className={`flex items-center gap-2 md:gap-3 px-3 py-2 md:px-4 md:py-3 rounded-2xl backdrop-blur-xl border transition-all duration-500 shadow-xl
