@@ -211,7 +211,7 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                                         <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
                                             {currentStep === 'STATION' ? (
                                                 stepData.serversAdded?.map((s, i) => (
-                                                    <div key={i} className="bg-[#2b2d31] p-3 rounded-lg border-l-2 border-green-500 text-[11px] text-zinc-300">Added to: <span className="text-[#5865F2] font-bold">{s}</span></div>
+                                                    <div key={i} className="bg-[#2b2d31] p-3 rounded-lg  text-zinc-300">Added to: <span className="text-[#5865F2] font-bold">{s}</span></div>
                                                 ))
                                             ) : (
                                                 messages.map(m => (
