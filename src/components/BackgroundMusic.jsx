@@ -66,7 +66,7 @@ export const BackgroundMusic = ({ isPhoneOpen, isCoffeeOpen }) => {
                 ${isPlaying ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
                 <div className="bg-black/40 backdrop-blur-md px-2 py-1 md:px-3 md:py-1.5 rounded-xl border border-white/5 flex items-center gap-2">
                     <span className="text-[7px] md:text-[9px] text-pink-300 font-bold uppercase tracking-tighter">Now Playing:</span>
-                    <span className="text-[8px] md:text-[10px] text-white font-medium italic whitespace-nowrap">For P — Solo Guitar</span>
+                    <span className="text-[8px] md:text-[10px] text-white font-medium italic whitespace-nowrap">For P — ilyatruhanov</span>
                 </div>
             </div>
         </div>
