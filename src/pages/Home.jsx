@@ -18,6 +18,7 @@ import { FancyMallModal } from "../components/FancyMallModal";
 import { VirtualPhone } from "../components/VirtualPhone";
 import { ReviewModal } from "../components/ReviewModal";
 import { ClinicReviewButton } from "../models/ClinicReviewButton";
+import {BackgroundMusic} from "../components/BackgroundMusic.jsx";
 
 const STATIONS = {
   STATION: { x: -15, sun: [0, 0, -1], light: 0.5, label: "Early Morning at Central Station", btn: "Start the Day 🚂" },
@@ -104,6 +105,10 @@ const Home = () => {
   return (
       <div className={`w-full h-screen relative bg-[#0f172a] transition-opacity duration-1000 ${isReady ? 'opacity-100' : 'opacity-0'}`}>
         <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes music-bar {
+        0%, 100% { height: 4px; }
+        50% { height: 12px; }
+      }
         ${hideAnnotations ? '.annotation { display: none !important; }' : ''}
         .annotation { filter: blur(${isTransitioning ? '4px' : '0px'}); transition: filter 1s; }
         @keyframes speed-streak {
@@ -125,29 +130,36 @@ const Home = () => {
             </div>
         )}
 
+        <div className={`
+    fixed z-[100] flex flex-row items-center gap-2 md:gap-4 
+    transition-all duration-500 
+    bottom-4 right-4 scale-90 origin-bottom-right
+    md:bottom-10 md:right-10 md:scale-100
+    ${isTransitioning ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}
+`}>
 
-        {/* PHONE ICON */}
-        {!isPhoneOpen && (
-            <button
-                onClick={() => { setIsPhoneOpen(true); setHasNotification(false); }}
-                className={`absolute bottom-10 right-10 z-[100] cursor-pointer w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-3xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all duration-500 border border-white/20 ${isTransitioning ? 'opacity-0 scale-50' : 'opacity-100 scale-100'}`}
-            >
-              <span className="text-4xl">📱</span>
-              {hasNotification && (
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center animate-bounce shadow-md">
-                    <span className="text-xs text-pink-600 font-black">1</span>
-                  </div>
-              )}
-            </button>
-        )}
+          <BackgroundMusic isCoffeeOpen={isCoffeeOpen} isPhoneOpen={isPhoneOpen} />
 
-        {/* MODALS */}
+          {!isPhoneOpen && (
+              <button
+                  onClick={() => { setIsPhoneOpen(true); setHasNotification(false); }}
+                  className="relative w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl md:rounded-3xl shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-all border border-white/20 cursor-pointer"
+              >
+                <span className="text-3xl md:text-4xl">📱</span>
+                {hasNotification && (
+                    <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center animate-bounce shadow-md">
+                      <span className="text-[10px] text-pink-600 font-black">1</span>
+                    </div>
+                )}
+              </button>
+          )}
+        </div>
+
         <ReviewModal isOpen={isReviewOpen} onClose={() => setIsReviewOpen(false)} />
         <CoffeeVideoModal isOpen={isCoffeeOpen} onClose={() => setIsCoffeeOpen(false)} />
         <FancyMallModal isOpen={isMallOpen} onClose={() => setIsMallOpen(false)} />
         <VirtualPhone isOpen={isPhoneOpen} onClose={() => setIsPhoneOpen(false)} currentStep={currentStep} />
 
-        {/* TRANSITION OVERLAY */}
         <div className={`absolute inset-0 z-50 pointer-events-none transition-opacity duration-1000 ${isTransitioning ? 'opacity-100 backdrop-blur-[2px]' : 'opacity-0'}`}>
           {isTransitioning && (
               <div className="absolute inset-0 overflow-hidden">
