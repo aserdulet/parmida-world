@@ -36,7 +36,7 @@ export function CoffeeVideoModal({ isOpen, onClose }) {
                             </h2>
                             <p className="text-white/80 text-xs sm:text-sm mt-3 sm:mt-4 max-w-md italic font-light leading-relaxed line-clamp-3 sm:line-clamp-none">
                                 Experience the art of coffee making with <span className="text-[#f1c40f] font-bold">much caring</span>.
-                                Crafted for style and flavor!
+                                Crafted from the emotes list, served with style as a message in Discord and Telegram!
                             </p>
                         </div>
                     </div>
