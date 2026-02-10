@@ -138,7 +138,7 @@ const Home = () => {
     ${isTransitioning ? 'opacity-0 translate-y-10' : 'opacity-100 translate-y-0'}
 `}>
 
-          <BackgroundMusic isCoffeeOpen={isCoffeeOpen} isPhoneOpen={isPhoneOpen} className="cursor-pointer"/>
+          <BackgroundMusic isCoffeeOpen={isCoffeeOpen} isPhoneOpen={isPhoneOpen} />
 
           {!isPhoneOpen && (
               <button
