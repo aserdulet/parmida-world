@@ -1,0 +1,5 @@
+@import "tailwindcss";
+[data-dre-html-parent] {
+    z-index: 1 !important; /* Îl ținem la baza ierarhiei de overlay */
+    pointer-events: none; /* Ne asigurăm că nu blochează click-urile pe restul UI-ului */
+}
