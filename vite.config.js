@@ -6,5 +6,16 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/parmida-world/',
   plugins: [react(),tailwindcss(),],
-  assetsInclude: ['**/*.glb', '**/*.gltf']
+  assetsInclude: ['**/*.glb', '**/*.gltf'],
+  build: {
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+        }
+      }
+    }
+  }
 })
