@@ -180,7 +180,7 @@ function NusseckeJoke({ onDismiss, onSuccess }) {
                         <div className="text-5xl mb-4 animate-pulse">🥜</div>
                         <h4 className="text-sm font-bold text-slate-800 uppercase tracking-tight">Out of Stock!</h4>
                         <p className="text-[10px] text-slate-500 my-4 leading-relaxed font-medium italic">
-                            "Nussecke is strictly reserved for the <span className="text-pink-500 font-bold underline">Frankfurt Summer Real Life Meting</span>. Consumption is only permitted when the 2 authorized persons meet."
+                            "Nussecke is strictly reserved for the <span className="text-pink-500 font-bold underline">Frankfurt Summer Real Life Meeting</span>. Consumption is only permitted when the 2 authorized persons meet."
                         </p>
                         <div className="space-y-2">
                             <button onClick={onDismiss} className="w-full py-4 bg-slate-100 cursor-pointer text-slate-600 rounded-2xl text-[10px] font-bold uppercase hover:bg-slate-200 transition-all">I'll wait for summer 😇</button>
