@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { DiscordVideoMessage } from './DiscordVideoMessage';
+import {PastryApp} from "./PastryApp.jsx";
 
 const DISCORD_DATA = {
     STATION: {
@@ -38,6 +39,8 @@ const DISCORD_DATA = {
 
 export function VirtualPhone({ isOpen, onClose, currentStep }) {
     const [activeApp, setActiveApp] = useState(null);
+    const [sugarLevel, setSugarLevel] = useState(20);
+    const [happiness, setHappiness] = useState(50);
     const [chatInput, setChatInput] = useState('');
     const [messages, setMessages] = useState([]);
     const [futureMessages, setFutureMessages] = useState([]);
@@ -171,7 +174,7 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                         </div>
 
                         <div className="flex-1 relative overflow-hidden flex flex-col">
-                            <div className={`absolute inset-0 transition-colors duration-1000 ${activeApp === 'discord' ? 'bg-[#313338]' : activeApp === 'jotto' || activeApp === 'notes' ? 'bg-white' : 'bg-linear-to-tr from-slate-900 to-rose-900'}`} />
+                            <div className={`absolute inset-0 transition-colors duration-1000 ${activeApp === 'discord' ? 'bg-[#313338]' : activeApp === 'pastry' ? 'bg-[#fdf8f5]' : activeApp === 'jotto' || activeApp === 'notes' ? 'bg-white' : 'bg-linear-to-tr from-slate-900 to-rose-900'}`} />
                             <div className="h-16 shrink-0 relative z-10" />
 
                             <div className="flex-1 relative z-10 overflow-hidden flex flex-col">
@@ -198,6 +201,18 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                                                 </div>
                                             </div>
                                             <span className="text-white text-[10px] font-bold">Notes</span>
+                                        </div>
+                                        <div onClick={() => setActiveApp('pastry')} className="flex flex-col items-center gap-2 cursor-pointer active:scale-90 transition-transform group">
+                                            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl border border-slate-100 relative overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-pink-50 opacity-60" />
+
+                                                <div className="relative flex items-center justify-center">
+                                                    <span className="text-2xl z-10">🧁</span>
+                                                </div>
+
+                                                <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-emerald-200 rounded-full blur-xl opacity-40" />
+                                            </div>
+                                            <span className="text-white text-[10px] font-bold">SugarRush</span>
                                         </div>
                                     </div>
                                 )}
@@ -280,6 +295,14 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                                             </div>
                                         </div>
                                     </div>
+                                )}
+                                {activeApp === 'pastry' && (
+                                    <PastryApp
+                                        sugarLevel={sugarLevel}
+                                        setSugarLevel={setSugarLevel}
+                                        happiness={happiness}
+                                        setHappiness={setHappiness}
+                                    />
                                 )}
                             </div>
                         </div>
