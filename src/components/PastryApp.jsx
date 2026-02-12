@@ -192,7 +192,7 @@ function NusseckeJoke({ onDismiss, onSuccess }) {
                         <div className="text-6xl mb-4 animate-bounce">🤫</div>
                         <h4 className="text-sm font-bold text-emerald-600 uppercase italic">Approved!</h4>
                         <p className="text-[11px] text-slate-500 mt-4 leading-relaxed font-medium">
-                            Hahaha, okay Doctor! But leave some for the summer.
+                            Hahaha, okay Doktor! But leave some for the summer.
                         </p>
                         <button onClick={onSuccess} className="mt-6 w-full cursor-pointer py-4 bg-pink-500 text-white rounded-2xl text-[10px] font-black uppercase shadow-lg shadow-pink-200 active:scale-95 transition-all">Ja / Si / areh / Da 😋</button>
                     </div>
