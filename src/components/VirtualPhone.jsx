@@ -293,6 +293,17 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                                                 </p>
                                                 <p className="text-xs text-gray-500 mt-auto italic">Everything has a solution - don't forget it!</p>
                                             </div>
+
+                                            <div className="mt-4 bg-[#fff9db] p-6 rounded-2xl shadow-sm border border-yellow-100 min-h-50 flex flex-col gap-2">
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-2 h-2 bg-[#f39c12] rounded-full" />
+                                                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Future Self</span>
+                                                </div>
+                                                <p className="text-xl font-medium text-gray-800 leading-tight">
+                                                    I was 10 hrs at work and still managed to do groceries and cook dinner. <span className="font-black border-b-2 border-[#f39c12]">You are a super hero</span>
+                                                </p>
+                                                <p className="text-xs text-gray-500 mt-auto italic">#legend</p>
+                                            </div>
                                         </div>
                                     </div>
                                 )}
