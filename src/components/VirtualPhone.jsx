@@ -108,6 +108,8 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                 await new Promise(r => setTimeout(r, 2000));
                 if (isCancelled) return;
                 setFutureMessages(prev => [...prev, { id: 103, user: 'Andrei', isVideo: true, videoUrl: "video/midas_clip.mp4" }]);
+                setFutureMessages(prev => [...prev, { id: 104, user: 'System', text: "Spoiler: She said yes!!!" }]);
+
             };
             sequence();
             return () => { isCancelled = true; };
