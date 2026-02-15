@@ -289,7 +289,7 @@ export function VirtualPhone({ isOpen, onClose, currentStep }) {
                             </div>
                         </div>
 
-                        {/* Home Bar */}
+                        {/* Season1 Bar */}
                         <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 rounded-full z-80 ${activeApp === 'jotto' || activeApp === 'notes' ? 'bg-black/20' : 'bg-white/20'}`} />
                     </div>
                 </div>
